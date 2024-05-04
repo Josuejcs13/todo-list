@@ -1,17 +1,17 @@
-import "./style.css"
+import "./style.css";
 
 type ButtonProps = {
-  text: string
-  type: "add" | "remove"
-  handleClick: () => void
-}
+  children: string;
+  type: "add" | "remove";
+  handleClick: () => void;
+};
 
-const Button = ({ handleClick, text, type }: ButtonProps) => {
+const Button = ({ handleClick, children, type }: ButtonProps) => {
   return (
     <button className={`button ${type}`} onClick={handleClick}>
-      {text}
+      {children}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

@@ -1,23 +1,27 @@
-import Button from "./components/button"
-import Input from "./components/input"
-import Title from "./components/title/title"
-import "./style.css"
+import Button from "./components/button";
+import Input from "./components/input";
+import Title from "./components/title/title";
+import "./style.css";
 
 function App() {
   const handleAdd = () => {
-    alert("Adicionar")
-  }
+    alert("Adicionar");
+  };
   const handleRemove = () => {
-    alert("Remover")
-  }
+    alert("Remover");
+  };
   return (
     <div className="main">
       <Title>Tarefas</Title>
       <Input type="text" placeholder="Adicione uma tarefa" />
-      <Button text="Adicionar" type="add" handleClick={handleAdd} />
-      <Button text="Limpar" type="remove" handleClick={handleRemove} />
+      <Button type="add" handleClick={handleAdd}>
+        Adicionar
+      </Button>
+      <Button type="remove" handleClick={handleRemove}>
+        Limpar
+      </Button>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
