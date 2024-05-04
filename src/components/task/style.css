@@ -1,0 +1,14 @@
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: rgb(175, 174, 174);
+}
+
+.task button {
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+  color: red;
+  font-size: 1rem;
+}
