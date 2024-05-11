@@ -1,0 +1,25 @@
+.task {
+  display: flex;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  width: 64rem;
+  background-color: #352432;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+.task p {
+  font-weight: 400;
+  color: #feede1;
+}
+.task button {
+  display: flex;
+  background-color: #352432;
+  border: none;
+  padding: 0;
+}
+.task button svg {
+  width: 24px;
+  height: 24px;
+  fill: #f25551;
+}
