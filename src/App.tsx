@@ -1,8 +1,8 @@
 import Button from "./components/button"
 import Input from "./components/input"
-import List from "./components/list"
+import Task from "./components/task"
 import Title from "./components/title/title"
-// import icon from "./assets/reading-side.svg"
+
 import "./style.css"
 
 function App() {
@@ -27,11 +27,10 @@ function App() {
             />
           </div>
         </header>
-        {/* <img src={icon} alt="image of a person reading" className="icon" /> */}
         <section className="container-list">
-          <List text="Lavar a roupa"></List>
-          <List text="Fazer o Projeto"></List>
-          <List text="Comer"></List>
+          <Task text="Lavar a roupa"></Task>
+          <Task text="Fazer o Projeto"></Task>
+          <Task text="Comer"></Task>
         </section>
       </main>
     </div>

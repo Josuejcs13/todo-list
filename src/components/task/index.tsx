@@ -1,12 +1,12 @@
 import "./stile.css"
 import { CiCircleRemove } from "react-icons/ci"
 
-type ListProps = {
+type TaskProps = {
   text: string
 }
-const List = ({ text }: ListProps) => {
+const Task = ({ text }: TaskProps) => {
   return (
-    <div className="list">
+    <div className="task">
       <p>{text}</p>
       <button>
         <CiCircleRemove />
@@ -16,4 +16,4 @@ const List = ({ text }: ListProps) => {
 
 }
 
-export default List
+export default Task
