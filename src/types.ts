@@ -1,6 +1,12 @@
 export type TaskType = {
   id: number
-  type: string
+  category: Category
   text: string
   done: boolean
+}
+export enum Category {
+  Casa = "Casa",
+  Trabalho = "Trabalho",
+  Estudo = "Estudo",
+  Pessoal = "Pessoal",
 }
