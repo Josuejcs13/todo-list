@@ -1,19 +1,19 @@
-import { FaRegTrashAlt } from "react-icons/fa";
-import "./style.css";
+import "./stile.css"
+import { CiCircleRemove } from "react-icons/ci"
 
 type TaskProps = {
-  name: string;
-};
-
-const Task = ({ name }: TaskProps) => {
+  text: string
+}
+const Task = ({ text }: TaskProps) => {
   return (
     <div className="task">
-      <p>{name}</p>
+      <p>{text}</p>
       <button>
-        <FaRegTrashAlt />
+        <CiCircleRemove />
       </button>
     </div>
-  );
-};
+  )
 
-export default Task;
+}
+
+export default Task
