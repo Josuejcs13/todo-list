@@ -7,11 +7,11 @@ import "./style.css"
 
 function App() {
   const handleAdd = () => {
-    alert("Adicionar")
-  }
+    alert("Adicionar");
+  };
   const handleRemove = () => {
-    alert("Remover")
-  }
+    alert("Remover");
+  };
   return (
     <div className="app">
       <Title>TO-Do List</Title>
@@ -19,12 +19,12 @@ function App() {
         <header className="inputs">
           <Input type="text" placeholder="New List" />
           <div className="buttons">
-            <Button text="Add to-do" type="add" handleClick={handleAdd} />
-            <Button
-              text="Delete List"
-              type="remove"
-              handleClick={handleRemove}
-            />
+            <Button type="add" handleClick={handleAdd}>
+              Add to-do
+            </Button>
+            <Button type="remove" handleClick={handleRemove}>
+              Delete List
+            </Button>
           </div>
         </header>
         <section className="container-list">
@@ -37,4 +37,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
