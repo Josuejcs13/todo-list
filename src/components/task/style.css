@@ -1,14 +1,25 @@
 .task {
   display: flex;
-  align-items: center;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  width: 64rem;
+  background-color: #352432;
+  border-radius: 5px;
   justify-content: space-between;
-  padding: 0.5rem;
-  background-color: rgb(175, 174, 174);
+  align-items: center;
 }
-
+.task p {
+  font-weight: 400;
+  color: #feede1;
+}
 .task button {
-  padding: 0.3rem;
-  border-radius: 0.2rem;
-  color: red;
-  font-size: 1rem;
+  display: flex;
+  background-color: #352432;
+  border: none;
+  padding: 0;
+}
+.task button svg {
+  width: 24px;
+  height: 24px;
+  fill: #f25551;
 }
