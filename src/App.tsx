@@ -1,34 +1,35 @@
-import { useEffect, useState } from "react"
-import Button from "./components/button"
-import Input from "./components/input"
-import Task from "./components/task"
-import Title from "./components/title/title"
-import SelectType from "./components/selectType"
-import { Category, TaskType } from "./types"
+import { useEffect, useState } from "react";
+import Button from "./components/button";
+import Input from "./components/input";
+import Task from "./components/task";
+import Title from "./components/title/title";
+import SelectType from "./components/selectType";
+import { Category, TaskType } from "./types";
 
-import "./style.css"
+import "./style.css";
+import List from "./components/list";
 
 function App() {
-  const [category, setCategory] = useState<Category>(Category.Trabalho)
+  const [category, setCategory] = useState<Category>(Category.Trabalho);
 
-  const [list, setList] = useState<TaskType[]>([])
+  const [list, setList] = useState<TaskType[]>([]);
 
-  const [value, setValue] = useState<string>("")
+  const [value, setValue] = useState<string>("");
 
   const [task, setTask] = useState<TaskType>({
     id: 0,
     text: "",
     category: category,
     done: true,
-  })
+  });
 
   useEffect(() => {
     setTask({
       ...task,
       text: value,
       category: category,
-    })
-  }, [value, category])
+    });
+  }, [value, category]);
 
   const createTask = () => {
     const newTask: TaskType = {
@@ -36,24 +37,24 @@ function App() {
       text: value,
       category: category,
       done: true,
-    }
-    setTask(newTask)
-  }
+    };
+    setTask(newTask);
+  };
 
   const handleAdd = () => {
-    createTask()
-    setList([...list, task])
-    setValue("")
-  }
+    createTask();
+    setList([...list, task]);
+    setValue("");
+  };
 
   const handleRemove = () => {
-    setList([])
-  }
+    setList([]);
+  };
 
   const handleRemoveTask = (id: number) => {
-    const newList = list.filter((task) => task.id != id)
-    setList(newList)
-  }
+    const newList = list.filter((task) => task.id != id);
+    setList(newList);
+  };
 
   return (
     <div className="app">
@@ -81,20 +82,10 @@ function App() {
             </Button>
           </div>
         </header>
-
-        <section className="container-list">
-          {list.map((task) => (
-            <Task
-              key={task.id}
-              text={task.text}
-              handleRemoveTask={handleRemoveTask}
-              id={task.id}
-            ></Task>
-          ))}
-        </section>
+        <List list={list} handleRemoveTask={handleRemoveTask} />
       </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
