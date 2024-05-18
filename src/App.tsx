@@ -28,7 +28,7 @@ function App() {
       text: value,
       category: category,
     })
-  }, [value])
+  }, [value, category])
 
   const createTask = () => {
     const newTask: TaskType = {

@@ -5,7 +5,7 @@ type SelectTypeProps = {
   setCategory: (category: Category) => void
 }
 
-const SelectType = ({ category, setCategory }: SelectTypeProps) => {
+const SelectType = ({category , setCategory}:SelectTypeProps) => {
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setCategory(event.target.value as Category)
   }
