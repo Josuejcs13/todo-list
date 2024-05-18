@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import Button from "./components/button";
 import Input from "./components/input";
-import Task from "./components/task";
 import Title from "./components/title/title";
 import SelectType from "./components/selectType";
 import { Category, TaskType } from "./types";
 
 import "./style.css";
 import List from "./components/list";
+import { IoMdReturnLeft } from "react-icons/io";
 
 function App() {
   const [category, setCategory] = useState<Category>(Category.Trabalho);
@@ -56,6 +56,21 @@ function App() {
     setList(newList);
   };
 
+  const handleEditTask = (editedText: string, id: number) => {
+    const taskToEdit = list.find((task) => task.id === id);
+    const editedTask = {
+      ...taskToEdit,
+      text: editedText,
+    };
+    const newList = list.map((task) => {
+      if (task.id === id) {
+        return editedTask;
+      }
+      return task;
+    });
+    setList(newList as TaskType[]);
+  };
+
   return (
     <div className="app">
       <Title>TO-Do List</Title>
@@ -82,7 +97,11 @@ function App() {
             </Button>
           </div>
         </header>
-        <List list={list} handleRemoveTask={handleRemoveTask} />
+        <List
+          list={list}
+          handleRemoveTask={handleRemoveTask}
+          handleEditTask={handleEditTask}
+        />
       </main>
     </div>
   );
