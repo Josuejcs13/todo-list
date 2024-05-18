@@ -5,9 +5,10 @@ import "./style.css";
 type listProps = {
   list: TaskType[];
   handleRemoveTask: (id: number) => void;
+  handleEditTask: (editedText: string, id: number) => void;
 };
 
-const List = ({ list, handleRemoveTask }: listProps) => {
+const List = ({ list, handleRemoveTask, handleEditTask }: listProps) => {
   return (
     <section className="container-list">
       {list.map((task) => (
@@ -16,7 +17,8 @@ const List = ({ list, handleRemoveTask }: listProps) => {
           text={task.text}
           handleRemoveTask={handleRemoveTask}
           id={task.id}
-        ></Task>
+          handleEditTask={handleEditTask}
+        />
       ))}
     </section>
   );
