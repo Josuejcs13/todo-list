@@ -22,7 +22,7 @@ const Task = ({
   category,
 }: TaskProps) => {
   const [isEditing, setIsEditing] = useState<boolean>(false)
-  const [taskEdited, setTaskEdited] = useState<string>("")
+  const [taskEdited, setTaskEdited] = useState<string>(text)
   const [typeEdited, setTypeEdited] = useState<Category>(category)
 
   const handleEdit = () => {
