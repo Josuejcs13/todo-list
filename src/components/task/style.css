@@ -1,8 +1,8 @@
 .task {
   display: flex;
-  padding-block: 1rem;
-  padding-inline: 2rem;
-  width: 64rem;
+  height: 3.75rem;
+  padding-inline: 1rem;
+  width: 70rem;
   background-color: #352432;
   border-radius: 5px;
   justify-content: space-between;
@@ -18,8 +18,65 @@
   border: none;
   padding: 0;
 }
-.task button svg {
+.button-remove svg {
   width: 24px;
   height: 24px;
   fill: #f25551;
+}
+.edit-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.edit-task Input {
+  font-size: 14px;
+  width: 30rem;
+  padding: 1rem;
+}
+.task button {
+  height: 100%;
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+.button-edit svg {
+  width: 26px;
+  height: 26px;
+  fill: #e5f877;
+}
+.ifo-style {
+  display: flex;
+  align-items: center;
+  gap: 7rem;
+  justify-content: space-around;
+}
+.ifo-style p {
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #50f283,
+    #f25551 50%,
+    #f25551 50%,
+    #632329
+  );
+  padding-block: 0.1rem;
+  padding-inline: 0.3rem;
+  font-weight: 600;
+  border-radius: 3px;
+}
+.confirm-edit svg {
+  width: 24px;
+  height: 24px;
+  fill: #50f283;
+}
+.edit-task Select {
+  font-size: 13px;
+  padding: 6px 30px 6px 26px;
+  font-weight: 600;
+  width: 180px;
+}
+.edit-task div {
+  width: 180px;
 }

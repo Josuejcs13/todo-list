@@ -22,19 +22,19 @@ body {
 main {
   display: flex;
   justify-content: center;
-  gap: 3.75rem;
+  gap: 3.5rem;
   padding: 0.4rem;
   position: relative;
   flex-direction: column;
 }
 .inputs {
   display: flex;
-  width: 64rem;
+  width: 70rem;
   height: 5rem;
   justify-content: space-between;
   align-items: center;
   padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding-bottom: 3.8rem;
   position: relative;
 }
 .inputs::after {
@@ -48,7 +48,7 @@ main {
 }
 .buttons {
   display: flex;
-  gap: 2rem;
+  gap: 1.8rem;
 }
 .icon {
   height: 10rem;

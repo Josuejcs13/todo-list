@@ -33,30 +33,34 @@ const Task = ({
   return (
     <div className="task">
       {isEditing ? (
-        <>
+        <div className="edit-task">
           <Input
             type="text"
-            placeholder={text}
+            placeholder=""
             value={taskEdited}
             setValue={setTaskEdited}
           />
+
           <SelectType category={typeEdited} setCategory={setTypeEdited} />
-          <button onClick={handleEdit}>
+          <button onClick={handleEdit} className="confirm-edit">
             <CiCircleCheck />
           </button>
-        </>
+        </div>
       ) : (
         <p>{text}</p>
       )}
-      {!isEditing && (
-        <button onClick={() => setIsEditing(true)}>
-          <CiEdit />
+      <div className="ifo-style">
+        <p>{category}</p>
+        {!isEditing && (
+          <button onClick={() => setIsEditing(true)} className="button-edit">
+            <CiEdit />
+          </button>
+        )}
+
+        <button onClick={() => handleRemoveTask(id)} className="button-remove">
+          <CiCircleRemove />
         </button>
-      )}
-      <p>{category}</p>
-      <button onClick={() => handleRemoveTask(id)}>
-        <CiCircleRemove />
-      </button>
+      </div>
     </div>
   )
 }

@@ -1,13 +1,14 @@
 .input-add {
   padding: 1.375rem;
-  background-color: #4627309c;
+  background-color: #46273052;
   border-radius: 0.3rem;
   font-weight: 600;
-  width: 36rem;
-  height: 2.5rem;
+  width: 37rem;
+  height: 2.4rem;
   color: #feede1be;
   font-size: 16px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  outline: none;
 }
 .input-add::placeholder {
   color: #feede1be;
