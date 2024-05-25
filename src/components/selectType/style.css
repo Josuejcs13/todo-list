@@ -1,0 +1,61 @@
+.custom-select-wrapper {
+  position: relative;
+  width: 13.75rem;
+}
+
+.custom-select {
+  display: block;
+  width: 100%;
+  padding: .625rem 2.5rem .625rem 1.875rem;
+  font-size: .875rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #241722;
+  border: .0625rem solid #feede1;
+  border-radius: 1.5625rem;
+  box-shadow: 0 .25rem .375rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.custom-select:hover {
+  background-color: #3b2840;
+  border-color: #e3b0ff;
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.2);
+}
+
+.custom-select-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: .9375rem;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: .375rem solid transparent;
+  border-right: .375rem solid transparent;
+  border-top: .375rem solid #fff;
+  pointer-events: none;
+  transition: border-top-color 0.3s ease;
+}
+
+.custom-select-wrapper:hover::after {
+  border-top-color: #e3b0ff;
+}
+
+.custom-select option {
+  color: #241722;
+  background-color: #fff;
+  padding: .625rem;
+}
+
+.custom-select option + option {
+  border-top: .0625rem solid #ddd;
+}
