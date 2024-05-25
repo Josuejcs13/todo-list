@@ -2,9 +2,9 @@ import "./style.css"
 
 type InputProps = {
   type: string
-  placeholder: string
   value: string
   setValue: (value: string) => void
+  placeholder?: string
 }
 
 const Input = ({ type, placeholder, value, setValue }: InputProps) => {

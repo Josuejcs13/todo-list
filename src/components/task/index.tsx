@@ -39,12 +39,7 @@ const Task = ({
     <div className="task">
       {isEditing ? (
         <div className="edit-task">
-          <Input
-            type="text"
-            placeholder=""
-            value={taskEdited}
-            setValue={setTaskEdited}
-          />
+          <Input type="text" value={taskEdited} setValue={setTaskEdited} />
 
           <SelectType category={typeEdited} setCategory={setTypeEdited} />
           <button onClick={handleEdit} className="confirm-edit">
