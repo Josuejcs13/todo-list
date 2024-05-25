@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react"
+import "./style.css"
 
 type CheckBoxProps = {
   value: boolean
