@@ -4,6 +4,7 @@ import { CiCircleRemove, CiEdit, CiCircleCheck } from "react-icons/ci"
 import Input from "../input"
 import SelectType from "../selectType"
 import { Category } from "../../types"
+import CheckBox from "../checkBox"
 
 type TaskProps = {
   text: string
@@ -12,6 +13,8 @@ type TaskProps = {
   handleEditTask: (editedText: string, id: number, category: Category) => void
   category: Category
   setCategory: (category: Category) => void
+  setDone: (id: number, done: boolean) => void
+  done: boolean
 }
 
 const Task = ({
@@ -20,6 +23,8 @@ const Task = ({
   handleRemoveTask,
   handleEditTask,
   category,
+  setDone,
+  done,
 }: TaskProps) => {
   const [isEditing, setIsEditing] = useState<boolean>(false)
   const [taskEdited, setTaskEdited] = useState<string>(text)
@@ -47,7 +52,10 @@ const Task = ({
           </button>
         </div>
       ) : (
-        <p>{text}</p>
+        <div className="ifo-values">
+          <CheckBox setDone={(done) => setDone(id, done)} value={done} />
+          <p>{text}</p>
+        </div>
       )}
       <div className="ifo-style">
         <p>{category}</p>

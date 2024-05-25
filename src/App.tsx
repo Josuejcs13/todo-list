@@ -19,7 +19,7 @@ function App() {
     id: 0,
     text: "",
     category: category,
-    done: true,
+    done: false,
   })
 
   useEffect(() => {
@@ -35,7 +35,7 @@ function App() {
       id: task.id + 1,
       text: value,
       category: category,
-      done: true,
+      done: false,
     }
     setTask(newTask)
   }
@@ -74,6 +74,12 @@ function App() {
     })
     setList(newList as TaskType[])
   }
+  const setDone = (id: number, done: boolean) => {
+    const newList = list.map((task) =>
+      task.id === id ? { ...task, done: done } : task
+    )
+    setList(newList)
+  }
 
   return (
     <div className="app">
@@ -91,7 +97,6 @@ function App() {
             category={category}
             setCategory={setCategory}
           ></SelectType>
-
           <div className="buttons">
             <Button type="add" handleClick={handleAdd}>
               Add to-do
@@ -106,6 +111,7 @@ function App() {
           handleRemoveTask={handleRemoveTask}
           handleEditTask={handleEditTask}
           setCategory={setCategory}
+          setDone={setDone}
         />
       </main>
     </div>
