@@ -7,6 +7,7 @@ type listProps = {
   handleRemoveTask: (id: number) => void
   handleEditTask: (editedText: string, id: number, category: Category) => void
   setCategory: (category: Category) => void
+  setDone: (id: number, done: boolean) => void
 }
 
 const List = ({
@@ -14,6 +15,8 @@ const List = ({
   handleRemoveTask,
   handleEditTask,
   setCategory,
+  setDone,
+  
 }: listProps) => {
   return (
     <section className="container-list">
@@ -26,6 +29,8 @@ const List = ({
           handleEditTask={handleEditTask}
           category={task.category}
           setCategory={setCategory}
+          setDone={setDone}
+          done={task.done}
         />
       ))}
     </section>

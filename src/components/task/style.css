@@ -80,3 +80,8 @@
 .edit-task div {
   width: 11.25rem;
 }
+.ifo-values {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
